@@ -1,23 +1,4 @@
-// $.ajax({
-//   url: "http://api.forismatic.com/api/1.0/",
-//     jsonp: "jsonp",
-//     dataType: "jsonp",
-//     data: {
-//       method: "getQuote",
-//       lang: "en",
-//       format: "jsonp"
-//     },
-//     success: function(data){
-//       if(data.quoteAutor == ""){
-//           $('#myDiv h1').html("<h1>Author Unknown</h1>");
-//       }else{
-//         $('#myDiv h1').html("<h1>"+data.quoteAuthor+"</h1>");
-//         $('#myDiv h3').html("<h3>"+data.quoteText+"</h3>");
-//       }
-//       // console.log(data);
-//     }
-// });
-//pre populate first quote
+
 getFirstQuote();
 
 function getFirstQuote(){
@@ -63,11 +44,11 @@ function getQuote(){
           $('#myDiv h1').html("<h1>"+data.quoteAuthor+"</h1>");
           $('#myDiv h3').html("<h3>"+data.quoteText+"</h3>");
         }
-        // console.log(data);
       }
   });
 }
 
 function tweetQ(){
-  console.log("tweetme function hit!");
+  var tweetThis = $('#myDiv h3').text();
+  $('#tweetQ a').attr("href", 'https://twitter.com/intent/tweet?text=' + tweetThis);
 }

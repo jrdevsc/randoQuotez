@@ -4,20 +4,25 @@
   <meta charset="UTF-8">
   <title>Rando-Quote</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-6 col-sm-offset-3">
-        <div class="red">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div>
           <div id="myDiv">
             <h1></h1>
             <h3></h3>
           </div>
         </div>
-        <button class="btn btn-success" id="getQ">Get a Quote</button>
-        <button class="btn btn-info" id="tweetQ">Tweet Quote</button>
+        <div id="buttonGroup">
+          <button class="btn btn-success" id="getQ">Get a Quote</button>
+          <button class="btn btn-info" id="tweetQ"><i class="fa fa-twitter" aria-hidden="true"></i><a>Tweet Quote</a></button>
+        </div>
       </div>
     </div>
   </div>
